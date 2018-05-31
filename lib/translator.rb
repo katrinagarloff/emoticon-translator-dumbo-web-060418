@@ -26,7 +26,11 @@ def get_japanese_emoticon(file_path, en_emoticon)
     end
     end
   end
+  if ja_emoticon.length == 0 
+    "Sorry, that emoticon was not found"
+  else
   ja_emoticon
+end
 end
 get_japanese_emoticon("./lib/emoticons.yml", ":)")
 
