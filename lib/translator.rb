@@ -12,7 +12,7 @@ def load_library(file_path)
 end
 load_library("./lib/emoticons.yml")
 def get_japanese_emoticon(file_path, en_emoticon)
-  #the_hash = load_library(file_path)
+  the_hash = load_library(file_path)
   
   the_hash.each do |key, hash_chunk|
     if key.to_s == "get_emoticon"
