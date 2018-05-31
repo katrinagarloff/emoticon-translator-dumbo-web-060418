@@ -16,6 +16,7 @@ def get_japanese_emoticon(file_path, en_emoticon)
   
   the_hash.each do |key, hash_chunk|
     if key.to_s == "get_emoticon"
+      puts key
     hash_chunk.each do |k, v|
       puts k 
       
