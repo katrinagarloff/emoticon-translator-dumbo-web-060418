@@ -11,18 +11,21 @@ def load_library(file_path)
  formatted_hash
 end
 load_library("./lib/emoticons.yml")
+
 def get_japanese_emoticon(file_path, en_emoticon)
   the_hash = load_library(file_path)
+  ja_emoticon = ""
   
   the_hash.each do |key, hash_chunk|
     if key.to_s == "get_emoticon"
-      puts key
-    hash_chunk.each do |k, v|
-      puts k 
       
+    hash_chunk.each do |k, v|
+      if k.to_s == en_emoticon
+      ja_emoticon = v
     end
     end
   end
+  ja_emoticon
 end
 get_japanese_emoticon("./lib/emoticons.yml", ":)")
 
