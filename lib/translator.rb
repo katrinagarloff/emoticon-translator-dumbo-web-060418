@@ -1,8 +1,11 @@
 # require modules here
 require "yaml"
 def load_library(file_path)
- new_hash = YAML::load_file(file_path)
- puts new_hash
+ og_hash = YAML::load_file(file_path)
+ 
+ og_hash.each do |key, ar|
+   puts key
+ end
 end
 load_library("./lib/emoticons.yml")
 
