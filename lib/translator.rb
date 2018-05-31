@@ -35,7 +35,24 @@ end
 get_japanese_emoticon("./lib/emoticons.yml", ":)")
 
 def get_english_meaning(file_path, ja_emoticon)
+    the_hash = load_library(file_path)
+  ja_emoticon = ""
   
+  the_hash.each do |key, hash_chunk|
+    if key.to_s == "get_emoticon"
+      
+    hash_chunk.each do |k, v|
+      if k.to_s == en_emoticon
+      ja_emoticon = v
+    end
+    end
+    end
+  end
+  if ja_emoticon.length == 0 
+    "Sorry, that emoticon was not found"
+  else
+  ja_emoticon
+end
   
   
 end
