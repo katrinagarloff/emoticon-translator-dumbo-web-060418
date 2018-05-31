@@ -9,7 +9,6 @@ def load_library(file_path)
  end
  formatted_hash
 end
-load_library("./lib/emoticons.yml")
 
 def get_japanese_emoticon(file_path, en_emoticon)
   the_hash = load_library(file_path)
@@ -20,7 +19,8 @@ def get_japanese_emoticon(file_path, en_emoticon)
     end
   end
 end
-get_japanese_emoticon("./lib/emoticons.yml", en_emoticon)
+get_japanese_emoticon("./lib/emoticons.yml", ":)")
+
 def get_english_meaning
   # code goes here
 end
