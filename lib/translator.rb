@@ -4,8 +4,9 @@ def load_library(file_path)
  og_hash = YAML::load_file(file_path)
  formatted_hash = Hash.new{|hsh,key| hsh[key] = {}}
  og_hash.each do |key, ar|
-   formatted_hash["get"].store("")
+   formatted_hash["get_meaning"].store(ar[0], key)
  end
+ puts formatted_hash
 end
 load_library("./lib/emoticons.yml")
 
