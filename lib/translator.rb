@@ -24,6 +24,7 @@ def get_japanese_emoticon(file_path, en_emoticon)
       ja_emoticon = v
     end
     end
+    end
   end
   ja_emoticon
 end
