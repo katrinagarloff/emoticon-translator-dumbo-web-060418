@@ -7,7 +7,7 @@ def load_library(file_path)
    formatted_hash["get_meaning"].store(ar[1], key)
    formatted_hash["get_emoticon"].store(ar[1], ar[0])
  end
- puts formatted_hash
+ formatted_hash
 end
 load_library("./lib/emoticons.yml")
 
