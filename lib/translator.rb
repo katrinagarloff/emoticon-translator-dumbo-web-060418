@@ -11,8 +11,14 @@ def load_library(file_path)
 end
 load_library("./lib/emoticons.yml")
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file_path, en_emoticon)
+  the_hash = load_library(file_path)
+  
+  the_hash.each do |get_m_e, hash_chunk|
+    hash_chunk.each do |k, v|
+      puts get_m_e
+    end
+  end
 end
 
 def get_english_meaning
