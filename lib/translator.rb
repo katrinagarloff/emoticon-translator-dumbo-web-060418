@@ -5,7 +5,7 @@ def load_library(file_path)
  formatted_hash = Hash.new{|hsh,key| hsh[key] = {}}
  og_hash.each do |key, ar|
    formatted_hash["get_meaning"].store(ar[1], key)
-   formatted_hash["get_emoticon"].store(ar[1], ar[0])
+   formatted_hash["get_emoticon"].store(ar[0], ar[1])
  end
  formatted_hash
 end
