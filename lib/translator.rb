@@ -1,5 +1,6 @@
 # require modules here
 require "yaml"
+require "pry"
 def load_library(file_path)
  og_hash = YAML::load_file(file_path)
  formatted_hash = Hash.new{|hsh,key| hsh[key] = {}}
@@ -17,6 +18,7 @@ def get_japanese_emoticon(file_path, en_emoticon)
     if get_m_e.to_s == "get_emoticon"
     hash_chunk.each do |k, v|
       puts k 
+      binding.pry
     end
     end
   end
