@@ -15,10 +15,10 @@ def get_japanese_emoticon(file_path, en_emoticon)
   #the_hash = load_library(file_path)
   
   the_hash.each do |get_m_e, hash_chunk|
-    if get_m_e.to_s == "get_emoticon"
+    if get_m_e == "get_emoticon"
     hash_chunk.each do |k, v|
       puts k 
-      binding.pry
+      
     end
     end
   end
