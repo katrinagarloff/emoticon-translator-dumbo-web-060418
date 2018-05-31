@@ -7,15 +7,16 @@ def load_library(file_path)
    formatted_hash["get_meaning"].store(ar[1], key)
    formatted_hash["get_emoticon"].store(ar[0], ar[1])
  end
- puts formatted_hash
+ formatted_hash
 end
 load_library("./lib/emoticons.yml")
 def get_japanese_emoticon(file_path, en_emoticon)
-  the_hash = load_library(file_path)
+  #the_hash = load_library(file_path)
   
   the_hash.each do |get_m_e, hash_chunk|
+    if get_m_e.to_s == "get_emoticon"
     hash_chunk.each do |k, v|
-      puts k
+      puts k 
     end
   end
 end
