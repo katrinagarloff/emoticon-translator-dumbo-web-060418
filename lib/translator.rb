@@ -18,6 +18,7 @@ def get_japanese_emoticon(file_path, en_emoticon)
     hash_chunk.each do |k, v|
       puts k 
     end
+    end
   end
 end
 #get_japanese_emoticon("./lib/emoticons.yml", ":)")
