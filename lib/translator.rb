@@ -1,7 +1,7 @@
 # require modules here
 require "yaml"
 def load_library(file_path)
- new_hash = YAML.load(file_path)
+ new_hash = YAML::load_file(file_path)
  puts new_hash
 end
 load_library("./lib/emoticons.yml")
