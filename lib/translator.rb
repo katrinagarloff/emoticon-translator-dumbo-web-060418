@@ -15,7 +15,7 @@ def get_japanese_emoticon(file_path, en_emoticon)
   
   the_hash.each do |get_m_e, hash_chunk|
     hash_chunk.each do |k, v|
-      puts get_m_e
+      puts k
     end
   end
 end
